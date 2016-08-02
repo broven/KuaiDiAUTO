@@ -1,11 +1,54 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>
+        <%=title %>
+    </title>
+
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=NVpbH1EGjQlqCGce8AGZIsDes3gEWqVa">
+        //v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+        //v1.4版本及以前版本的引用方式：src="http://api.map.baidu.com/api?v=1.4&key=您的密钥&callback=initialize"
+    </script>
+</head>
+
+<body>
+    <div class="inpoutbox">
+        <input type="text" id="expressNumber" placeholder="请输入你的快递单号">
+        <input type="button" value="显示" id="submit">
+    </div>
+    <div id="container"></div>
+      <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/CurveLine/1.5/src/CurveLine.min.js"></script>
+
+<script src="/javascripts/myjs.js" charset="utf-8"></script>
+</body>
+
+
+
+<style type="text/css">
+    .inpoutbox {
+        position: absolute;
+        z-index: 1;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+    html {
+        height: 100%
+    }
+
+    body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px
+    }
+
+    #container {
+        height: 100%
+    }
+</style>
+
 </html>
